@@ -1,5 +1,5 @@
 {% set name = "types-influxdb-client" %}
-{% set version = "1.45.0.20240814" %}
+{% set version = "1.45.0.20240907" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-influxdb-client-{{ version }}.tar.gz
-    sha256: 27d89f38b39ac16f5e120ec8ab12ae1d94bb5ccda045b5d70f193efb083aedef
+    sha256: eccd8b4d9611bc15765271878a3e48123b202f71cce2704fc6594f4937ca9b24
   - url: https://github.com/python/typeshed/raw/main/LICENSE
     sha256: 295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe
     path: LICENSE
