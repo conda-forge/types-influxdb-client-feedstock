@@ -1,13 +1,13 @@
 {% set name = "types-influxdb-client" %}
-{% set version = "1.45.0.20240915" %}
+{% set version = "1.45.0.20241221" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-influxdb-client-{{ version }}.tar.gz
-    sha256: 412847fb50889e09cdc4c817c7a2d280fcd2548887dcec8e0dbd8958c3d86134
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+    sha256: 9a643c3cbc2e607179858bf3cf888355e522ad9e358149d53107aa2c9d1a3ec8
   - url: https://github.com/python/typeshed/raw/main/LICENSE
     sha256: 295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe
     path: LICENSE
@@ -19,10 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - urllib3 >=2
 
 test:
